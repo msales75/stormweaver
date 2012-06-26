@@ -1,0 +1,327 @@
+attribute_translator.cls.php:    $node = $frame->get_node();
+block_frame_decorator.cls.php:      if ( $frame->get_node()->nodeName == "br" ) {
+block_frame_decorator.cls.php:        $this->maximize_line_height( $frame->get_style()->length_in_pt($frame->get_style()->line_height) );
+block_frame_decorator.cls.php:      foreach ($frame->get_children() as $child)
+block_frame_decorator.cls.php:    $w = $frame->get_margin_width();
+block_frame_decorator.cls.php://     pre_r("Node: " . $frame->get_node()->nodeName . " (" . (string)$frame->get_node() . ")");
+block_frame_decorator.cls.php://     if ( $frame->get_node()->nodeName == "#text" )
+block_frame_decorator.cls.php://       pre_r($frame->get_node()->nodeValue);
+block_frame_decorator.cls.php://     pre_r("Frame height: " . $frame->get_margin_height());
+block_frame_decorator.cls.php:    $frame->position();
+block_frame_decorator.cls.php:    if ( $frame->get_node()->nodeName == "#text")
+block_frame_decorator.cls.php:      $this->_lines[$this->_cl]["wc"] += count(preg_split("/\s+/", $frame->get_text()));
+block_frame_decorator.cls.php:    $this->_lines[$this->_cl]["h"] = max($this->_lines[$this->_cl]["h"], $frame->get_margin_height());
+block_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+block_frame_reflower.cls.php:    $w = $this->_frame->get_containing_block("w");
+block_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+block_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+block_frame_reflower.cls.php:    foreach ($this->_frame->get_lines() as $line)
+block_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+block_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+block_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+block_frame_reflower.cls.php:    $w = $this->_frame->get_containing_block("w");
+block_frame_reflower.cls.php:      foreach ($this->_frame->get_lines() as $line) {
+block_frame_reflower.cls.php:          $frame->set_position( $frame->get_position("x") + $dx );
+block_frame_reflower.cls.php:      foreach ($this->_frame->get_lines() as $i => $line) {
+block_frame_reflower.cls.php:            $frame->set_position( $frame->get_position("x") + $dx );
+block_frame_reflower.cls.php:            $frame->set_text_spacing($spacing);
+block_frame_reflower.cls.php:            $dx += mb_substr_count($frame->get_text(), " ") * $spacing;
+block_frame_reflower.cls.php:          $this->_frame->set_line($i, null, $width);
+block_frame_reflower.cls.php:      foreach ($this->_frame->get_lines() as $i => $line) {
+block_frame_reflower.cls.php:          $frame->set_position( $frame->get_position("x") + $dx );
+block_frame_reflower.cls.php:    foreach ( $this->_frame->get_lines() as $i => $line ) {
+block_frame_reflower.cls.php:        $style = $frame->get_style();
+block_frame_reflower.cls.php:        $frame_h = $frame->get_margin_height();
+block_frame_reflower.cls.php:        $x = $frame->get_position("x");
+block_frame_reflower.cls.php:        $frame->set_position($x, $y);
+block_frame_reflower.cls.php:    $page = $this->_frame->get_root();
+block_frame_reflower.cls.php:    $this->_frame->position();
+block_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+block_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+block_frame_reflower.cls.php:    list($x, $y) = $this->_frame->get_position();
+block_frame_reflower.cls.php:    $this->_frame->increase_line_width($indent);
+block_frame_reflower.cls.php:    $this->_frame->set_current_line($line_y);
+block_frame_reflower.cls.php:    foreach ( $this->_frame->get_children() as $child ) {
+block_frame_reflower.cls.php:      $this->_frame->add_frame_to_line( $child );
+block_positioner.cls.php:    $cb = $this->_frame->get_containing_block();
+block_positioner.cls.php:    $p = $this->_frame->find_block_parent();
+block_positioner.cls.php:    $this->_frame->css
+block_positioner.cls.php:    $this->_frame->set_position($x, $y);
+block_renderer.cls.php:    $style = $frame->get_style();
+block_renderer.cls.php:    list($x, $y, $w, $h) = $frame->get_padding_box();
+block_renderer.cls.php:    $cb = $frame->get_containing_block();
+block_renderer.cls.php:    $style = $frame->get_style();
+block_renderer.cls.php:    $bbox = $frame->get_border_box();
+block_renderer.cls.php:    $bp = $frame->get_style()->get_border_properties();
+cellmap.cls.php:    $key = $frame->get_id();
+cellmap.cls.php:    $key = $frame->get_id();
+cellmap.cls.php:    $key = $frame->get_id();
+cellmap.cls.php:    $key = $frame->get_id();
+cellmap.cls.php:    $style = $frame->get_style();    
+cellmap.cls.php:      foreach ( $frame->get_children() as $child ) 
+cellmap.cls.php:      $key = $frame->get_id();
+cellmap.cls.php:    $colspan = $frame->get_node()->getAttribute("colspan");
+cellmap.cls.php:    $rowspan = $frame->get_node()->getAttribute("rowspan");
+cellmap.cls.php:      $frame->get_node()->setAttribute("colspan",1);
+cellmap.cls.php:      $frame->get_node()->setAttribute("rowspan",1);
+cellmap.cls.php:    $key = $frame->get_id();
+cellmap.cls.php:    list($frame_min, $frame_max) = $frame->get_min_max_width();    
+cellmap.cls.php:        unset($this->_frames[ $frame->get_id() ]);
+cellmap.cls.php:        $frame->set_cell_height($h);
+cellmap.cls.php:        $frame->get_style()->height = $h;
+cellmap.cls.php:        $frame->set_cell_height($new_height);
+cellmap.cls.php:        $frame->get_style()->height = $new_height;
+dompdf.cls.php:      if ( $frame->get_style()->display == "list-item" ) {
+dompdf.cls.php:        $style->inherit($frame->get_style());
+frame.cls.php:            $str .= htmlspecialchars($frame->get_text());
+frame.cls.php:            $str .= "\nBlock: " . $frame->get_node()->nodeName . " (" . (string)$frame->get_node() . ")";
+frame.cls.php:    $this->_cur = $frame->get_first_child();
+frame_decorator.cls.php:    $frame->set_decorator($this);
+frame_decorator.cls.php:    $this->_frame->dispose(false);
+frame_decorator.cls.php:    $frame->set_style(clone $this->_frame->get_original_style());
+frame_decorator.cls.php:    $frame->set_style(clone $this->_frame->get_original_style());
+frame_decorator.cls.php:    $this->_frame->reset();
+frame_decorator.cls.php:  function get_node() { return $this->_frame->get_node(); }
+frame_decorator.cls.php:  function get_id() { return $this->_frame->get_id(); }
+frame_decorator.cls.php:  function get_style() { return $this->_frame->get_style(); }
+frame_decorator.cls.php:  function get_original_style() { return $this->_frame->get_original_style(); }
+frame_decorator.cls.php:  function get_containing_block($i = null) { return $this->_frame->get_containing_block($i); }
+frame_decorator.cls.php:  function get_position($i = null) { return $this->_frame->get_position($i); }
+frame_decorator.cls.php:  function get_margin_height() { return $this->_frame->get_margin_height(); }
+frame_decorator.cls.php:  function get_margin_width() { return $this->_frame->get_margin_width(); }
+frame_decorator.cls.php:  function get_padding_box() { return $this->_frame->get_padding_box(); }
+frame_decorator.cls.php:  function get_border_box() { return $this->_frame->get_border_box(); }
+frame_decorator.cls.php:  function set_id($id) { $this->_frame->set_id($id); }
+frame_decorator.cls.php:  function set_style(Style $style) { $this->_frame->set_style($style); }
+frame_decorator.cls.php:    $this->_frame->set_containing_block($x, $y, $w, $h);
+frame_decorator.cls.php:    $this->_frame->set_position($x, $y);
+frame_decorator.cls.php:  function __toString() { return $this->_frame->__toString(); }
+frame_decorator.cls.php:    $this->_frame->prepend_child($child, $update_node);
+frame_decorator.cls.php:    $this->_frame->append_child($child, $update_node);
+frame_decorator.cls.php:    $this->_frame->insert_child_before($new_child, $ref, $update_node);
+frame_decorator.cls.php:    $this->_frame->insert_child_after($new_child, $ref, $update_node);
+frame_decorator.cls.php:    $this->_frame->remove_child($child, $update_node);
+frame_decorator.cls.php:    $p = $this->_frame->get_parent();
+frame_decorator.cls.php:    $c = $this->_frame->get_first_child();
+frame_decorator.cls.php:    $c = $this->_frame->get_last_child();
+frame_decorator.cls.php:    $s = $this->_frame->get_prev_sibling();
+frame_decorator.cls.php:    $s = $this->_frame->get_next_sibling();
+frame_decorator.cls.php:      $this->_frame->set_positioner($posn);
+frame_decorator.cls.php:      $this->_frame->set_reflower( $reflower );
+frame_decorator.cls.php:        $this->_frame->set_root($root);
+frame_decorator.cls.php:    $split = $this->copy( $this->_frame->get_node()->cloneNode() );
+frame_decorator.cls.php:      $frame->reset();
+frame_factory.cls.php:    $frame->set_reflower( new Page_Frame_Reflower($frame) );
+frame_factory.cls.php:    switch ($frame->get_style()->display) {
+frame_factory.cls.php:      if ( $frame->get_node()->nodeName == "#text" ) {
+frame_factory.cls.php:      if ( $frame->get_style()->list_style_position == "inside" )
+frame_factory.cls.php:      if ( $frame->get_style()->list_style_image != "none" )
+frame_factory.cls.php:    if ( $frame->get_node()->nodeName == "_dompdf_generated" ) {
+frame_factory.cls.php://    if ( $frame->get_node()->nodeName == "img" ) {
+frame_factory.cls.php://       $node =$frame->get_node()->ownerDocument->createElement("img_sub");
+frame_factory.cls.php://       $node->setAttribute("src", $frame->get_node()->getAttribute("src"));
+frame_factory.cls.php://       $style = $frame->get_style()->get_stylesheet()->create_style();
+frame_factory.cls.php://       $style->inherit($frame->get_style());
+frame_factory.cls.php://       $img_frame->set_style( $style );
+frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+frame_reflower.cls.php:    $style = $this->_frame->get_style();
+frame_reflower.cls.php:    $n = $this->_frame->get_next_sibling();
+frame_reflower.cls.php:    $f = $this->_frame->get_first_child();
+frame_reflower.cls.php:    $y = $this->_frame->get_position("y");
+frame_reflower.cls.php:    if ( $y + $h >= $this->_frame->get_root()->get_page_height() )
+frame_reflower.cls.php:    $style = $this->_frame->get_style();
+frame_reflower.cls.php:    $delta = $style->length_in_pt($dims, $this->_frame->get_containing_block("w"));
+frame_reflower.cls.php:    if ( !$this->_frame->get_first_child() )
+frame_reflower.cls.php:    for ( $iter = $this->_frame->get_children()->getIterator();
+frame_tree.cls.php:    $id = $frame->get_id();
+frame_tree.cls.php:      $frame->append_child($this->_build_tree_r($child), false);
+generated_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+generated_frame_reflower.cls.php:          $p = $this->_frame->find_block_parent();
+generated_frame_reflower.cls.php:          $p = $this->_frame->find_block_parent();
+generated_frame_reflower.cls.php:          $text .= $this->_frame->get_node()->getAttribute($attr);
+generated_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+generated_frame_reflower.cls.php:    $t_node = $this->_frame->get_node()->ownerDocument->createTextNode($text);    
+generated_frame_reflower.cls.php:    $t_frame->set_style($t_style);
+generated_frame_reflower.cls.php:    $this->_frame->prepend_child(Frame_Factory::decorate_frame($t_frame));
+image_frame_decorator.cls.php:    $url = $frame->get_node()->getAttribute("src");
+image_frame_reflower.cls.php:    $style = $this->_frame->get_parent()->get_style();
+image_frame_reflower.cls.php:    list($img_width, $img_height, $type) = getimagesize($this->_frame->get_image_url());
+image_frame_reflower.cls.php:    $inner_style = $this->_frame->get_style();
+image_renderer.cls.php:    $p = $frame->get_parent();
+image_renderer.cls.php:    $style = $frame->get_style();
+image_renderer.cls.php:    $cb = $frame->get_containing_block();
+image_renderer.cls.php:    list($x, $y) = $frame->get_padding_box();
+image_renderer.cls.php:    $this->_canvas->image( $frame->get_image_url(), $frame->get_image_ext(), $x, $y, $w, $h);
+inline_frame_decorator.cls.php:    if ( $frame->get_parent() !== $this )
+inline_frame_decorator.cls.php:    $split = $this->copy( $this->_frame->get_node()->cloneNode() ); 
+inline_frame_decorator.cls.php:      $frame->reset();
+inline_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+inline_frame_reflower.cls.php:    $this->_frame->position();
+inline_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+inline_frame_reflower.cls.php:    if ( ($f = $this->_frame->get_first_child()) && $f instanceof Text_Frame_Decorator ) {
+inline_frame_reflower.cls.php:    if ( ($l = $this->_frame->get_last_child()) && $l instanceof Text_Frame_Decorator ) {
+inline_frame_reflower.cls.php:    foreach ( $this->_frame->get_children() as $child ) {
+inline_positioner.cls.php:    $cb = $this->_frame->get_containing_block();
+inline_positioner.cls.php:    $p = $this->_frame->find_block_parent();
+inline_positioner.cls.php://     pre_r("Me: " . $this->_frame->get_node()->nodeName . " (" . (string)$this->_frame->get_node() . ")");
+inline_positioner.cls.php:    $this->_frame->set_position($cb["x"] + $line["w"], $line["y"]);
+inline_renderer.cls.php:    $style = $frame->get_style();
+inline_renderer.cls.php:    if ( !$frame->get_first_child() )
+inline_renderer.cls.php:    list($x, $y) = $frame->get_first_child()->get_position();
+inline_renderer.cls.php:    foreach ($frame->get_children() as $child) {
+inline_renderer.cls.php:        if ( $frame->get_node()->nodeName == "a" ) {
+inline_renderer.cls.php:          if ( $href = $frame->get_node()->getAttribute("href") )
+inline_renderer.cls.php:    if ( $frame->get_node()->nodeName == "a" ) {
+inline_renderer.cls.php:      if ( $name = $frame->get_node()->getAttribute("name") )
+inline_renderer.cls.php:      if ( $href = $frame->get_node()->getAttribute("href") )
+list_bullet_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+list_bullet_frame_reflower.cls.php:    $style->width = $this->_frame->get_width();
+list_bullet_frame_reflower.cls.php:    $this->_frame->position();
+list_bullet_frame_reflower.cls.php:      $p = $this->_frame->find_block_parent();
+list_bullet_image_frame_decorator.cls.php:    $url = $frame->get_style()->list_style_image;
+list_bullet_image_frame_decorator.cls.php:    $frame->get_node()->setAttribute("src", $url);
+list_bullet_positioner.cls.php:    $cb = $this->_frame->get_containing_block();
+list_bullet_positioner.cls.php:    $style = $this->_frame->get_style();
+list_bullet_positioner.cls.php:    $x = $cb["x"] - $this->_frame->get_width();
+list_bullet_positioner.cls.php:    $p = $this->_frame->find_block_parent();
+list_bullet_positioner.cls.php:    $n = $this->_frame->get_next_sibling();
+list_bullet_positioner.cls.php:    $this->_frame->set_position($x, $y);
+list_bullet_renderer.cls.php:    $style = $frame->get_style();
+list_bullet_renderer.cls.php:    $line_height = $style->length_in_pt($style->line_height, $frame->get_containing_block("w"));
+list_bullet_renderer.cls.php:      list($x,$y) = $frame->get_position();
+list_bullet_renderer.cls.php:      $w = $frame->get_width();
+list_bullet_renderer.cls.php:      $h = $frame->get_height();
+list_bullet_renderer.cls.php:      $this->_canvas->image( $frame->get_image_url(), $frame->get_image_ext(), $x, $y, $w, $h);
+list_bullet_renderer.cls.php:        list($x,$y) = $frame->get_position();
+list_bullet_renderer.cls.php:        list($x, $y) = $frame->get_position();
+null_frame_decorator.cls.php:    $style = $this->_frame->get_style();
+page_frame_decorator.cls.php:      $this->_bottom_page_margin = $h; // - $this->_frame->get_style()->length_in_pt($this->_frame->get_style()->margin_bottom, $w);
+page_frame_decorator.cls.php:    $style = $frame->get_style();
+page_frame_decorator.cls.php:    $prev = $frame->get_prev_sibling();
+page_frame_decorator.cls.php:      $frame->split();
+page_frame_decorator.cls.php:      // $frame->style to the frame's orignal style.
+page_frame_decorator.cls.php:      $frame->get_style()->page_break_before = "auto";
+page_frame_decorator.cls.php:      $frame->split();
+page_frame_decorator.cls.php://      echo "\nbreak_allowed: " . $frame->get_node()->nodeName ."\n";
+page_frame_decorator.cls.php:    $display = $frame->get_style()->display;
+page_frame_decorator.cls.php:      if ( $frame->get_style()->page_break_before == "avoid" ) {
+page_frame_decorator.cls.php:      $prev = $frame->get_prev_sibling();
+page_frame_decorator.cls.php:      $parent = $frame->get_parent();
+page_frame_decorator.cls.php:      $block_parent = $frame->find_block_parent();
+page_frame_decorator.cls.php:      if ( count($block_parent->get_lines() ) < $frame->get_style()->orphans ) {
+page_frame_decorator.cls.php:      $prev = $frame->get_prev_sibling();
+page_frame_decorator.cls.php:      if ( $frame->get_node()->nodeName == "#text" &&
+page_frame_decorator.cls.php:           $frame->get_node()->nodeValue == "" )
+page_frame_decorator.cls.php://       echo "? " . $frame->get_style()->display . "\n";
+page_frame_decorator.cls.php:    $max_y = $frame->get_position("y") + $frame->get_margin_height();
+page_frame_decorator.cls.php:    $p = $frame->get_parent();
+page_frame_decorator.cls.php:    $frame->split();
+page_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+page_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+page_frame_reflower.cls.php:    $child = $this->_frame->get_first_child();
+page_frame_reflower.cls.php:      $this->_frame->get_renderer()->render($child);
+page_frame_reflower.cls.php:        $this->_frame->next_page();
+php_evaluator.cls.php:    $this->evaluate($frame->get_node()->nodeValue);
+renderer.cls.php:    $display = $frame->get_style()->display;
+renderer.cls.php:      if ( $frame->get_node()->nodeName == "#text" )
+renderer.cls.php:      $node = $frame->get_node();
+renderer.cls.php:    foreach ($frame->get_children() as $child)
+stylesheet.cls.php:      // pre_r($frame->get_node()->nodeName . ":");
+stylesheet.cls.php:      if ( $frame->get_node()->nodeType != 1 ) {
+stylesheet.cls.php:        $frame->set_style($style);
+stylesheet.cls.php:      $id = $frame->get_id();
+stylesheet.cls.php:      if ( ($str = $frame->get_node()->getAttribute("style")) !== "" ) {
+stylesheet.cls.php:        $applied_styles = $styles[ $frame->get_id() ];
+stylesheet.cls.php://       pre_r($frame->get_node()->nodeName . ":");
+stylesheet.cls.php:      $frame->set_style($style);
+table_cell_frame_decorator.cls.php:    $this->_frame->reset();    
+table_cell_frame_decorator.cls.php:          $frame->set_position( null, $frame->get_position("y") + $delta );
+table_cell_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+table_cell_frame_reflower.cls.php:    $this->_frame->set_position($x, $y);
+table_cell_frame_reflower.cls.php:    $h = $this->_frame->get_containing_block("h");
+table_cell_frame_reflower.cls.php:    $this->_frame->increase_line_width($indent);
+table_cell_frame_reflower.cls.php:    $this->_frame->set_current_line($line_y);
+table_cell_frame_reflower.cls.php:    foreach ( $this->_frame->get_children() as $child ) {
+table_cell_frame_reflower.cls.php:      $this->_frame->add_frame_to_line( $child );
+table_cell_frame_reflower.cls.php:    $this->_frame->set_content_height($this->_calculate_content_height());
+table_cell_frame_reflower.cls.php:    $height = max($height, $this->_frame->get_content_height());
+table_cell_positioner.cls.php:    $this->_frame->set_position($cellmap->get_frame_position($this->_frame));
+table_cell_renderer.cls.php:    $style = $frame->get_style();
+table_cell_renderer.cls.php:    list($x, $y, $w, $h) = $frame->get_padding_box();
+table_cell_renderer.cls.php:      list($x, $y, $w, $h) = $frame->get_padding_box();
+table_frame_decorator.cls.php:    while ( $frame = $frame->get_parent() ) 
+table_frame_decorator.cls.php:      if ( in_array($frame->get_style()->display, Style::$TABLE_TYPES) )
+table_frame_decorator.cls.php:          $frame->set_style(clone $style);
+table_frame_decorator.cls.php:      $this->_frame->append_child($table_row);
+table_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+table_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+table_frame_reflower.cls.php:    $columns =& $this->_frame->get_cellmap()->get_columns();
+table_frame_reflower.cls.php:    $cellmap = $this->_frame->get_cellmap();
+table_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+table_frame_reflower.cls.php:    $cellmap = $this->_frame->get_cellmap();
+table_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+table_frame_reflower.cls.php:    $page = $this->_frame->get_root();
+table_frame_reflower.cls.php:    $this->_frame->position();
+table_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+table_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+table_frame_reflower.cls.php:    list($x, $y) = $this->_frame->get_position();
+table_frame_reflower.cls.php:    $cellmap = $this->_frame->get_cellmap();
+table_frame_reflower.cls.php:    foreach ( $this->_frame->get_children() as $child ) {
+table_frame_reflower.cls.php:    //echo ($this->_frame->get_cellmap());
+table_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+table_frame_reflower.cls.php:    $this->_frame->normalise();
+table_frame_reflower.cls.php:    $this->_frame->get_cellmap()->add_frame($this->_frame);
+table_frame_reflower.cls.php:    $columns =& $this->_frame->get_cellmap()->get_columns();
+table_row_frame_reflower.cls.php:    $page = $this->_frame->get_root();
+table_row_frame_reflower.cls.php:    $this->_frame->position();
+table_row_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+table_row_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+table_row_frame_reflower.cls.php:    foreach ($this->_frame->get_children() as $child) {
+table_row_frame_reflower.cls.php:    $this->_frame->set_position($cellmap->get_frame_position($this->_frame));
+table_row_group_frame_reflower.cls.php:    $page = $this->_frame->get_root();
+table_row_group_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+table_row_group_frame_reflower.cls.php:    $cb = $this->_frame->get_containing_block();
+table_row_group_frame_reflower.cls.php:    foreach ( $this->_frame->get_children() as $child) {
+table_row_group_frame_reflower.cls.php:    $this->_frame->set_position($cellmap->get_frame_position($this->_frame));
+table_row_positioner.cls.php:    $cb = $this->_frame->get_containing_block();    
+table_row_positioner.cls.php:    $p = $this->_frame->get_prev_sibling();
+table_row_positioner.cls.php:    $this->_frame->set_position($cb["x"], $y);
+text_frame_decorator.cls.php:    if ( $frame->get_node()->nodeName != "#text" )
+text_frame_decorator.cls.php:    if ( $this->_frame->get_style()->content !== "normal" ) {
+text_frame_decorator.cls.php:      $this->_frame->get_node()->data = $this->_frame->get_style()->content;
+text_frame_decorator.cls.php:      $this->_frame->get_style()->content = "normal";
+text_frame_decorator.cls.php:    return $this->_frame->get_node()->data;
+text_frame_decorator.cls.php:    $pb = $this->_frame->get_padding_box();
+text_frame_decorator.cls.php:    $pb["h"] = $this->_frame->get_style()->height;
+text_frame_decorator.cls.php:    $style = $this->_frame->get_style();
+text_frame_decorator.cls.php:    $split = $this->_frame->get_node()->splitText($offset);
+text_frame_decorator.cls.php:    $this->_frame->get_node()->deleteData($offset, $count);
+text_frame_decorator.cls.php:    $this->_frame->get_node()->data = $text;
+text_frame_reflower.cls.php:    //$text = $this->_frame->get_text();
+text_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+text_frame_reflower.cls.php:    $line_width = $this->_frame->get_containing_block("w");
+text_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+text_frame_reflower.cls.php:    $text = $this->_frame->get_text();
+text_frame_reflower.cls.php:      $this->_frame->set_text( $text = $this->_collapse_white_space($text) );
+text_frame_reflower.cls.php:      $this->_frame->set_text( $text = $this->_collapse_white_space($text) );
+text_frame_reflower.cls.php:      $this->_frame->set_text( $text = preg_replace( "/[ \t]+/u", " ", $text ) );
+text_frame_reflower.cls.php:        $this->_frame->set_text("");
+text_frame_reflower.cls.php:        //$this->_frame->set_text(ltrim($text, "\n\r"));
+text_frame_reflower.cls.php:        $this->_frame->position();
+text_frame_reflower.cls.php:      } else if ( $split < mb_strlen($this->_frame->get_text()) ) {
+text_frame_reflower.cls.php:        $this->_frame->split_text($split);
+text_frame_reflower.cls.php:        $t = $this->_frame->get_text();
+text_frame_reflower.cls.php:          $this->_frame->set_text( mb_substr($t, 0, -1) );
+text_frame_reflower.cls.php:        $this->_frame->position();
+text_frame_reflower.cls.php:      $width = Font_Metrics::get_text_width($this->_frame->get_text(), $font, $size, $word_spacing);
+text_frame_reflower.cls.php:    $this->_block_parent = $this->_frame->find_block_parent();
+text_frame_reflower.cls.php:    $this->_frame->position();
+text_frame_reflower.cls.php:    $style = $this->_frame->get_style();
+text_frame_reflower.cls.php:    $this->_block_parent = $this->_frame->find_block_parent();
+text_frame_reflower.cls.php:    $line_width = $this->_frame->get_containing_block("w");
+text_frame_reflower.cls.php:    $str = $text = $this->_frame->get_text();
+text_renderer.cls.php:    $style = $frame->get_style();
+text_renderer.cls.php:    list($x, $y) = $frame->get_position();
+text_renderer.cls.php:    $cb = $frame->get_containing_block();
+text_renderer.cls.php:    $text = $frame->get_text();
+text_renderer.cls.php:    $spacing = $frame->get_text_spacing() + $style->word_spacing;

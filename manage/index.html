@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Stormweaver Programming &amp; Consulting - Invoice #267</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 100%; 
+}
+
+p, h1, h2, h3, h4, h5, hr, ul , div, img, span, li {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+.total {
+  background-color: #FDF;
+}
+
+.odd {
+  background-color: #EFF;
+}
+.even {
+  background-color: #DDF;
+}
+
+table {
+  width: 100%;
+  border-width: 0.0063in;
+  border-spacing: 0;
+  font-size: 10pt;
+  border-style: solid;
+  border-color: blue;
+  /* border-collapse: collapse; */
+}
+
+table th {
+  border-width: 0.0063in;
+  padding: 0.03in;
+  border-style: solid;
+  border-color: blue;
+}
+table td {
+  border-width: 0.0063in;
+  padding: 0.03in;
+  border-style: solid;
+  border-color: blue;
+}
+
+.line_date {
+  width: 15%;
+}
+/* Used to be 60% w/o line_rate */
+.line_description {
+width: 45%;
+}
+
+td.line_description {
+ padding: 4px;
+ text-align: left;
+}
+.line_quoted {
+width: 10%;
+}
+.line_hours {
+width: 10%;
+}
+.line_billed {
+width: 10%;
+}
+.line_rate {
+width: 10%;
+}
+/* Used to be 10% */
+.line_cost {
+width: 10%;
+text-align: right;
+padding-right: 0.15in;
+}
+
+#period {
+  text-align: center;
+}
+
+.section_category {
+  width: 40%;
+}
+
+.section_quoted {
+width: 12.5%;
+}
+
+.section_hours {
+width: 12.5%;
+}
+
+.section_billed {
+width: 12.5%;
+}
+
+.section_prorate {
+width: 12.5%;
+}
+
+.section_cost {
+width: 12.5%;
+text-align: right;
+padding-right: 0.15in;
+}
+
+#wrapper {
+  text-align: left;
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  margin-top: 0.4in; 
+  margin-left: 0.6in;
+}
+
+#logo img {
+  height: 1.4in;
+  margin: 0;
+}
+
+#footer {
+  margin-left: 2.0in;
+  font-size: 8pt;
+  text-align: right;
+  color: #25A;
+  width: 5in;
+}
+
+#banner {
+  position: absolute;
+  margin-top: 0;
+  margin-left: 2.0in;
+  min-width: 6.5in;
+}
+
+#banner img {
+  height: 0.375in;
+  margin: 0;
+}
+
+.bottom_line {
+  width: 6.00in;
+  height: 0.035in;
+  background-color: #05A;
+  z-index: -1;
+}
+
+#line {
+  position: absolute;
+  margin-top: 1.02in;
+  margin-left: 0.1in; 
+  width: 6.45in;
+  height: 0.035in;
+  background-color: #05A;
+  z-index: -1;
+}
+
+h1 {
+  position: absolute;
+  margin-left: 3.3in;
+  margin-top: 0.40in;
+  vertical-align: top;
+  font-size: 36pt;
+  line-height: 100%;
+  color: #DDF;
+}
+
+.date {
+  position: absolute;
+  margin-top: 1.2in;
+  margin-left: 5.5in;
+  width: 2in;
+  font-size: 14pt;
+  color: #05A;
+  text-align: right;
+}
+
+h2 {
+  position: absolute;
+  margin-top: 0.5in;
+  margin-left: 6.5in;
+  width: 1.0in;
+  text-align: right;
+  margin-right: 0.5in;
+  font-size: 24pt;
+  font-weight: bold;
+  color: #05A;
+  padding: 0;
+}
+
+h3 {
+  padding-top: 0.0in;
+  padding-left: 0.0in;
+  font-size: 18pt;
+  font-weight: bold;
+  color: #000;
+  padding-bottom: 0.1in;
+}
+
+h4 {
+  padding-top: 0.18in;
+  padding-bottom: 0.05in;
+  padding-left: 0.3in;
+  font-size: 14pt;
+  color: #05A;
+}
+
+h5 {
+  padding-left: 0.5in;
+  font-size: 10pt;
+  color: #000;
+  padding-bottom: 0.05in;
+}
+
+#space {
+  padding: 0;
+  margin: 0;
+  width: 6in;
+  height: 3.2in;
+}
+
+#content {
+  margin-left: 1.0in;
+  width: 6.5in;
+  padding-bottom: 0.25in;
+}
+
+.section {
+  /* margin-top: 0.15in; */
+  text-align: center;
+  border-style: solid;
+  border-width: 0.0125in;
+  border-color: #05A;
+  background-color: #DDF;
+  width: 100%;
+}
+
+ul.total {
+  font-size: 14pt;
+  color: #000;
+  padding-top: 0.1in;
+  padding-left: 0.0in;
+  text-align: center;
+  background-color: #FFF;
+}
+ul.total li {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+ul.label {
+  position: absolute;
+  margin-top: 2.0in;
+  margin-left: 1.0in;
+  width: 2.0in;
+  text-align: center;
+}
+ul.label li {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 10pt;
+  color: #25A;
+}
+
+ul.client {
+  position: absolute;
+  border-style: solid;
+  border-width: 0.025in;
+  border-color: #05A;
+  background-color: #DDF;
+  padding-top: 0.14in;
+  padding-bottom: 0.14in;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 1.8in;
+  margin-left: 4.5in;
+  text-align: center;
+  width: 3.0in;
+}
+
+ul.client li {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 10pt;
+  color: #000;
+}
+
+
+</style>
+
+</head>
+<body>
+<div id="wrapper">
+
+<div id="line"></div>
+<div id="logo"><img alt="logo" src="logo.gif" /></div>
+<div id="banner"><img alt="gradient" src="grad-corner.gif" /><img alt="gradient" src="gradient.gif" /> </div>
+
+<h1>INVOICE</h1>
+<h2>#267</h2>
+<div class="date">2012-06-12</div>
+
+<ul class="label">
+<li>Mark A. Sales, Ph.D.</li>
+<li>512 Kearney St #4</li>
+<li>El Cerrito, CA 94530</li>
+<li>(510) 932-9724</li>
+<li>dr.mark.sales@gmail.com</li>
+<li>http://stormweaver.com</li>
+</ul>
+
+<ul class="client">
+<li>Kurt Salmon - Heather Blonkenfeld</li>
+<li>345 California Street, Suite 1600</li>
+<li></li>
+<li>San Francisco, CA 94104</li>
+<li>(415) 296-9200</li>
+<li>heather.blonkenfeld@kurtsalmon.com</li>
+</ul>
+
+<div id="space"></div>
+
+<div id="content">
+
+
+<h4 id="period">Invoice Period: 6/11/2012 - 6/25/2012</h4>
+
+<!-- Summary here -->
+<h3>Overview</h3>
+<div class="bottom_line"></div>
+<br />
+<h5>First two weeks of programming work on Kurt Salmon website and content management system.  Includes building specification and beginning of Phase 1.  Phase 1 features public-facing site without editor.</h5>
+<br />
+
+<ul class="total">
+<li>TOTAL COST: $3000</li>
+<li>Prev. Payments: $0</li>
+<li>AMOUNT DUE: $3000</li>
+</ul>
+
+<br />
+<h3>Line Items</h3>
+<div class="bottom_line"></div>
+<br />
+
+<div class="section">
+<table>
+<tr>
+<th class='line_date'>Date</th>
+<th class='line_description'>Description</th>
+<th class='line_cost'>Cost</th>
+</tr>
+<tr>
+<td class='line_date odd'>6/11-6/25</td>
+<td class='line_description odd'><strong>Prepaid 2 weeks</strong>
+</td>
+<td class='line_cost odd'>$3000</td>
+</tr>
+</table>
+<table>
+<tr>
+<th class='line_date total'></th>
+<th class='line_description total'>TOTAL</th>
+<th class='line_cost total'>$3000</th>
+</tr>
+</table>
+</div><!-- section -->
+
+</div><!-- content -->
+
+<h4>THANK YOU FOR YOUR BUSINESS!</h4>
+
+<div id="footer">
+<div class="bottom_line"></div>
+<span >&copy; Stormweaver Programming, 2009</span>
+</div>
+
+
+</div><!-- wrapper -->
+</body>
+</html>
